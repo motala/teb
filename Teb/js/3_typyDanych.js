@@ -42,18 +42,43 @@ console.log(tab);
 console.log(typeof(tab));//object
 
 //###############################################################################################################################################################################
-
+/*
 //var liczba = prompt("Podaj liczbę");
 var liczba1 = prompt("Podaj liczbę", "liczba 1");
 var liczba2 = prompt("Podaj liczbę", "liczba 2");
 var suma = liczba1 + liczba2; //konkatenacja
 console.log(suma);
 
-liczba1 = parseInt(liczba1);
-liczba2 = parseInt(liczba2);
+//konwersja na typ całkowity
+//liczba1 = parseInt(liczba1);
+//liczba2 = parseInt(liczba2);
+
+//konwersja na typ zmiennoprzecinkowy
+
+liczba1 = parseFloat(liczba1);
+liczba2 = parseFloat(liczba2);
+
 var suma1 = liczba1 + liczba2;
 console.log("Po Konwersji typów" + suma1);
 
 console.log(typeof(liczba1)); //number
 console.log(typeof(liczba2)); //number
+*/
+//###############################################################################################################################################################################
+//zadanie1
 
+/*Użytkownnik podaje z klawiatury długość boku kwadratu
+wyświetl na ekranie w formacie "Długość boku wynosi:...... cm"
+"Pole kwadratu wynosi:.......cm2"*/
+
+var liczba = prompt("Podaj długość boku kwadratu");
+var pole = liczba * liczba;
+document.write("Długość boku wynosi:" + liczba + "cm<br>");
+document.write("Pole kwadratu wynosi:"+ pole +"cm<sup>2</sup><br>");
+
+//###############################################################################################################################################################################
+
+//zadanie Domowe
+//napisz program obliczający pole trójkąta
+
+//###############################################################################################################################################################################
