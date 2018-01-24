@@ -71,14 +71,22 @@ console.log(typeof(liczba2)); //number
 wyświetl na ekranie w formacie "Długość boku wynosi:...... cm"
 "Pole kwadratu wynosi:.......cm2"*/
 
-var liczba = prompt("Podaj długość boku kwadratu");
+/*var liczba = prompt("Podaj długość boku kwadratu");
 var pole = liczba * liczba;
 document.write("Długość boku wynosi:" + liczba + "cm<br>");
-document.write("Pole kwadratu wynosi:"+ pole +"cm<sup>2</sup><br>");
+document.write("Pole kwadratu wynosi:"+ pole +"cm<sup>2</sup><br>");*/
 
 //###############################################################################################################################################################################
 
 //zadanie Domowe
 //napisz program obliczający pole trójkąta
 
-//###############################################################################################################################################################################
+//#############################################################################################################################################################################
+
+var liczba1 = prompt("Podaj pierwszą długość");
+var liczba2 = prompt("Podaj drugą długość");
+var liczba3 = prompt("Podaj wysokość");
+
+var pole = liczba1 * liczba2 / liczba3;
+
+document.write("Pole trójkąta wynosi:" + pole + "cm<sup>2</sup>");
