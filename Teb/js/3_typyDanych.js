@@ -90,3 +90,4 @@ var liczba3 = prompt("Podaj wysokość");
 var pole = liczba1 * liczba2 / liczba3;
 
 document.write("Pole trójkąta wynosi:" + pole + "cm<sup>2</sup>");
+color.font="red";
