@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>DIV - suma</title>
+    <link rel="stylesheet" href="style/styl1.css">
+</head>
+<body>
+    <!--<div id="d1">1</div>
+    <div id="d2">2</div>
+    <div id="d3">3</div>
+    <div id="d4">4</div>
+    <div id="d5">5</div>-->
+
+    <div id="x" class="lewy">x</div>
+    <div class="lewy">+</div>
+    <div  id="y" class="lewy">y</div>
+    <div class="lewy">=</div>
+    <div id="wynik" class="lewy">5</div>
+      <script>
+    var x = prompt("Podaj X");
+        x = parseFloat(x);
+    var y = prompt("Podaj Y");
+        y =parseFloat(y);
+    var divX = document.getElementById("x");
+        divX.innerHTML = x;
+    var divY = document.getElementById("y");
+       divY.innerHTML = y;
+    var suma = x + y;
+    var wynik = document.getElementById("wynik");
+          wynik.innerHTML = suma;
+    </script>
+</body>
+</html>
