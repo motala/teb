@@ -84,9 +84,8 @@ document.write("Pole kwadratu wynosi:"+ pole +"cm<sup>2</sup><br>");*/
 //#############################################################################################################################################################################
 
 var a = prompt("Podaj długość pierwszego boku trójkąta a");
-var b = prompt("Podaj długość drugiego boku trójkąta b");
 var h = prompt("Podaj wysokość trójkąta h");
 
-var pole = a * b / h;
+var pole = a * h / 2;
 
 document.write("Pole trójkąta wynosi:" + pole + "cm<sup>2</sup><br>");
