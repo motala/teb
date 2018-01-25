@@ -83,7 +83,7 @@ document.write("Pole kwadratu wynosi:"+ pole +"cm<sup>2</sup><br>");*/
 
 //#############################################################################################################################################################################
 
-var a = prompt("Podaj długość pierwszego boku trójkąta a");
+var a = prompt("Podaj długość boku trójkąta a");
 var h = prompt("Podaj wysokość trójkąta h");
 
 var pole = a * h / 2;
