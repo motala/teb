@@ -7,17 +7,22 @@
 </head>
 <body>
 <form>
-    <input type="text" id="liczba" autofocus>X<br><br>
+    <input type="text" id="liczba1" autofocus>X<br><br>
+    <input type="text" id="liczba2" >Y<br><br>
 </form>
     <button id="przycisk">Pole</button>
     <div id="wynik"></div>
      <script>
           var przycisk = document.getElementById("przycisk");
             var blok = document.getElementById("wynik");
-            var liczba, tekst;
+            var liczba1,liczba2,tekst;
             przycisk.onclick = function(){
-            liczba = document.getElementById("liczba").value;
-            tekst = '<span style="color:red">Pole wynosi: ' + liczba * liczba + "cm<sup>2</sup></span><br>";
+            liczba1 = document.getElementById("liczba1").value;
+            liczba2 = document.getElementById("liczba2").value;
+            tekst = '<span style="color:red">Pole kwadratu wynosi:' + liczba1 * liczba1 + "cm<sup>2</sup></span><br>";
+            tekst +='<span style="color:blue">Pole prostokąta wynosi:' + liczba1 * liczba2 +"cm<sup>2</sup></span><br>";
+            tekst +='<span style="color:black">Pole trójkąta wynosi:' + (liczba1 * liczba2)/2 +"cm<sup>2</sup></span><br>";
+
                 blok.innerHTML= tekst;
             }
     </script>
