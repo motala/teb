@@ -16,14 +16,18 @@
         <script>
             var przycisk = document.getElementById("przycisk");
             var blok = document.getElementById("wynik");
-            var imie, nazwisko;
+            var imie, nazwisko, tekst;
             przycisk.onclick = function(){
             imie = document.getElementById("imie").value;
             nazwisko = document.getElementById("nazwisko").value;
 
-                blok.innerHTML= "Twoje imię:" + imie + "<br>";
-                //document.write("Twoje nazwisko:" + nazwisko + "<br>);
-                //alert(imie + nazwisko);
+            tekst = "Twoje Imię:" + imie + "<br>"
+            tekst += "Twoje Nazwisko:" + nazwisko + "<br>";
+            blok.innerHTML= tekst ;
+
+
+            //document.write("Twoje nazwisko:" + nazwisko + "<br>);
+            //alert(imie + nazwisko);
             }
     </script>
 </body>
