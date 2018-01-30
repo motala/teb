@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Formularz</title>
+    <link rel="stylesheet" href="style/styl1.css">
+</head>
+<body>
+  <script>
+    function witaj(imie){
+        document.write("Witaj" + imie + "<br>")
+    }
+
+      function poleKwadratu(bok){
+          document.write("Pole wynosi:" + bok * bok + "<br>")
+      }
+
+      function poleKwadratu1(bok){
+          var pole = bok * bok ;
+          document.write("Pole wynosi:" + pole + "<br>")
+      }
+
+
+       function poleKwadratu2(bok){
+           var pole = bok * bok;
+       return pole;
+       }
+
+      witaj("Janusz"); //wywołanie funkcji
+
+      var x = "Anna";
+      witaj(x); //wywołuje x czyli anna
+
+
+      /*var imie1 = prompt("Podaj swoje Imie");
+      witaj(imie1);*/
+
+      poleKwadratu(4); //wywołuje funkcje poleKwadratu
+      poleKwadratu1(5);
+     //alert(poleKwadratu2(3));
+      console.log(poleKwadratu2(3));
+    </script>
+
+
+</body>
+</html>
