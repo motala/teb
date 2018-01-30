@@ -26,6 +26,10 @@
        return pole;
        }
 
+      function poleProstokata(a,b){
+          return a * b;
+      }
+
       witaj("Janusz"); //wywołanie funkcji
 
       var x = "Anna";
@@ -38,7 +42,18 @@
       poleKwadratu(4); //wywołuje funkcje poleKwadratu
       poleKwadratu1(5);
      alert("Pole kwadratu wynosi:" + poleKwadratu2(3));
-      console.log(poleKwadratu2(3));
+      /*console.log(poleKwadratu2(3)); */
+      var bok1, bok2, poleProst;
+      bok1 = prompt("Podaj bok pierwszy");
+      bok2 = prompt("Podaj bok drugi");
+      poleProst = poleProstokata(bok1,bok2);
+      console.log(poleProst);
+
+
+
+
+
+
     </script>
 
 
