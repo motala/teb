@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Formularz</title>
+    <link rel="stylesheet" href="style/styl.css">
+</head>
+<body>
+<form>
+    <input type="text" id="liczba" autofocus>x<br><br>
+</form>
+    <button id="przycisk">Pole</button>
+    <div id="wynik"></div>
+     <script>
+          var przycisk = document.getElementById("przycisk");
+            var blok = document.getElementById("wynik");
+            var liczba, tekst;
+            przycisk.onclick = function(){
+            liczba = document.getElementById("liczba").value;
+            tekst = '<span style="color:red">Pole wynosi: ' + liczba * liczba + "cm<sup>2</sup></span><br>";
+
+                blok.innerHTML= tekst;
+            }
+    </script>
+</body>
+</html>
