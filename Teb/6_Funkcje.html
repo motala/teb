@@ -41,18 +41,26 @@
 
       poleKwadratu(4); //wywołuje funkcje poleKwadratu
       poleKwadratu1(5);
-     alert("Pole kwadratu wynosi:" + poleKwadratu2(3));
+     /*alert("Pole kwadratu wynosi:" + poleKwadratu2(3));*/
       /*console.log(poleKwadratu2(3)); */
       var bok1, bok2, poleProst;
       bok1 = prompt("Podaj bok pierwszy");
       bok2 = prompt("Podaj bok drugi");
       poleProst = poleProstokata(bok1,bok2);
       console.log(poleProst);
+      document.write("Pole prostokata wynosi:" + poleProst + "cm<sup>2</sup><br> ")
+//###############################################################################################################################################################################
+     /* zadanie napisz funkcje pole trójkąta*/
+      function poleTrojkata(a,h){
+          return (a*h)/2 ;
+      }
 
-
-
-
-
+        var podstawa, wysokosc, poleTroj;
+      podstawa = prompt("Podaj długość podstawy ");
+      wysokosc = prompt("Podaj wysokosc");
+      poleTroj = poleTrojkata(podstawa,wysokosc);
+      document.write('Pole trójkąta wynosi: <span style="color:blue">' + poleTroj + "cm<sup>2</sup></span><br> ");
+//###############################################################################################################################################################################
 
     </script>
 

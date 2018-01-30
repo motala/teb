@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Formularz2</title>
+    <link rel="stylesheet" href="style/styl1.css">
+    <script>
+    function poleObjetosc(a, b, h){
+        var pole = a * b;
+        var objetosc = pole * h;
+        var wynik = [pole, objetosc];
+        return wynik;
+            }
+    </script>
+</head>
+<body>
+  <script>
+      console.log(poleObjetosc(2,3,4));
+    document.write("Pole: " + poleObjetosc(2,3,4)[0] + "cm<sup>2</sup><br>");
+    document.write("Objętość: " + poleObjetosc(2,3,4)[1] + "cm<sup>3</sup><br>");
+
+    </script>
+
+</body>
+</html>
