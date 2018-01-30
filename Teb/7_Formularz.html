@@ -7,14 +7,26 @@
 </head>
 <body>
 <form>
-    <input type="text" id="imie"><br><br>
+    <input type="text" id="imie" autofocus>Imię<br><br>
+    <input type="text" id="nazwisko" >Nazwisko<br><br>
 
     </form>
     <button id="przycisk">Sprawdz</button>
+    <div id="wynik"></div>
         <script>
-    document.getElementById("przycisk").onclick = function(){
-        alert("test");
-    }
+            var przycisk = document.getElementById("przycisk");
+            var blok = document.getElementById("wynik");
+            var imie, nazwisko;
+            przycisk.onclick = function(){
+            imie = document.getElementById("imie").value;
+            nazwisko = document.getElementById("nazwisko").value;
+
+                blok.innerHTML= "Twoje imię:" + imie + "<br>";
+                //document.write("Twoje nazwisko:" + nazwisko + "<br>);
+                //alert(imie + nazwisko);
+            }
+
+
     </script>
 </body>
 </html>
