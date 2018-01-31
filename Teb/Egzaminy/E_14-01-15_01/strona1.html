@@ -34,10 +34,22 @@
                     elWynik.innerHTML = "";
                 }
             }
+                function dodawanie(){
+                    if(elPierwsza.value.length != 0 && elDruga.value.length != 0){
+                     var x = parseFloat(elPierwsza.value);
+                    var y = parseFloat(elDruga.value);
+                    elWynik.innerHTML = x + y;
+                    }
+                    }
+
+
                 elDodawanie.addEventListener('click', puste);
                 elOdejmowanie.addEventListener('click', puste);
                 elMnozenie.addEventListener('click', puste);
                 elDzielenie.addEventListener('click', puste);
+                elDodawanie.addEventListener('click', dodawanie);
+
+
             </script>
     </div>
 
