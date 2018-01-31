@@ -8,7 +8,7 @@
     <body>
         <div id="baner"><img src="baner.jpg"></div>
         <div id="manu">menu</div>
-        <div id="tresc" >
+        <div id="tresc">
             <h1>PROSTE DZIAŁANIA</h1>
     <form>
     Podaj pierwszą liczbę:<input type="number" id="pierwsza"><br><br>
@@ -42,12 +42,39 @@
                     }
                     }
 
+                function odejmowanie(){
+                    if(elPierwsza.value.length != 0 && elDruga.value.length != 0){
+                     var x = parseFloat(elPierwsza.value);
+                    var y = parseFloat(elDruga.value);
+                    elWynik.innerHTML = x - y;
+                    }
+                    }
+
+                function mnozenie(){
+                    if(elPierwsza.value.length != 0 && elDruga.value.length != 0){
+                     var x = parseFloat(elPierwsza.value);
+                    var y = parseFloat(elDruga.value);
+                    elWynik.innerHTML = x * y;
+                    }
+                    }
+
+                function dzielenie(){
+                    if(elPierwsza.value.length != 0 && elDruga.value.length != 0){
+                     var x = parseFloat(elPierwsza.value);
+                    var y = parseFloat(elDruga.value);
+                    elWynik.innerHTML = x / y;
+                    }
+                    }
+
 
                 elDodawanie.addEventListener('click', puste);
                 elOdejmowanie.addEventListener('click', puste);
                 elMnozenie.addEventListener('click', puste);
                 elDzielenie.addEventListener('click', puste);
                 elDodawanie.addEventListener('click', dodawanie);
+                elOdejmowanie.addEventListener('click', odejmowanie);
+                elMnozenie.addEventListener('click', mnozenie);
+                elDzielenie.addEventListener('click', dzielenie);
 
 
             </script>
