@@ -9,10 +9,38 @@
         <div id="baner"><img src="baner.jpg"></div>
         <div id="manu">menu</div>
         <div id="tresc" >
+            <h1>PROSTE DZIAŁANIA</h1>
     <form>
-    Podaj pierwszą liczbę:<input type="number" id="Pierwsza"><br><br>
-        Podaj drugą liczbę:<input type="number" id="Druga"><br><br>
+    Podaj pierwszą liczbę:<input type="number" id="pierwsza"><br><br>
+    Podaj drugą liczbę:<input type="number" id="druga"><br><br>
     </form>
+    <button id="dodawanie">DODAWANIE</button>
+    <button id="odejmowanie">ODEJMOWANIE</button>
+    <button id="mnozenie">MNOŻENIE</button>
+    <button id="dzielenie">DZIELENIE</button><br><br>
+            <div id="wynik"></div>
+            <script>
+                var elPierwsza = document.getElementById("pierwsza");
+                var elDruga = document.getElementById("druga");
+                var elDodawanie = document.getElementById("dodawanie");
+                var elOdejmowanie = document.getElementById("odejmowanie");
+                var elMnozenie = document.getElementById("mnozenie");
+                var elDzielenie = document.getElementById("dzielenie");
+                var elWynik = document.getElementById("wynik");
+                 function puste(){
+                if(elPierwsza.value.length == 0 || elDruga.value.length == 0){
+                   elWynik.innerHTML = "Proszę uzupełnić obie liczby";
+                } else{
+                    elWynik.innerHTML = "";
+                }
+            }
+                elDodawanie.addEventListener('click', puste);
+                elOdejmowanie.addEventListener('click', puste);
+                elMnozenie.addEventListener('click', puste);
+                elDzielenie.addEventListener('click', puste);
+            </script>
     </div>
+
+
 </body>
 </html>
