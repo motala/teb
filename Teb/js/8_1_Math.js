@@ -88,8 +88,50 @@ console.log(typeof(j));//string
 
 
 //losowanie
-//losuj liczby z przediału <0:10>
+//losuj liczbę z przediału <0:10>
+var l = Math.floor(Math.random() * 11);
+console.log(l);
 
 
+//losuj liczbę z przedziału <10;20>
+
+var l1 = Math.floor(Math.random()* 11 + 10);
+console.log(l1);
 
 
+//losuj liczbę z przedziału <31;50>
+
+var l2 = Math.floor(Math.random() * 20 + 31 );
+console.log(l2);
+//#############################################################################################################################################################################
+
+//zadanie 1
+/*uzytkownik zaznacza jedno z dwoch pol radio.
+1 pole- obwód
+2 pole- pole kwadratu*/
+
+
+var elBok = document.getElementById("bok");
+var elObwod = document.getElementById("obwod");
+var elPole = document.getElementById("pole");
+var elPrzycisk = document.getElementById("przycisk");
+var elKomunikat = document.getElementById("komunikat");
+var obwod;
+var pole;
+
+function oblicz(){
+    if(elObwod.checked){
+        if(elBok.value > 0){
+
+        obwod = 4 * elBok.value;
+        obwod = obwod.toFixed(2);
+        elKomunikat.innerHTML = "Obwód kwadratu wynosi:" + obwod;
+                    }else{
+                        elKomunikat.innerHTML = "Błędna długość boku";
+                        elBok.focus();
+                        elBok.value = "";
+                    }
+
+    }
+}
+elPrzycisk.addEventListener('click',oblicz);
