@@ -6,12 +6,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
     <body>
-        <div id="baner"><img src="baner.jpg"></div>
-        <div id="manu">menu</div>
+        <div id="baner"><a href="index.html"><img src="baner.jpg"></a></div>
+        <div id="manu">
+            Menu
+        <ul>
+            <li><a href="strona1.html">- proste działania</a></li>
+            <li><a href="strona2.html">- potęgowanie</a></li>
+            </ul></div>
         <div id="tresc">
             <h1>PROSTE DZIAŁANIA</h1>
     <form>
-    Podaj pierwszą liczbę:<input type="number" id="pierwsza"><br><br>
+    Podaj pierwszą liczbę:<input type="number" id="pierwsza" autofocus><br><br>
     Podaj drugą liczbę:<input type="number" id="druga"><br><br>
     </form>
     <button id="dodawanie">DODAWANIE</button>
@@ -62,7 +67,10 @@
                     if(elPierwsza.value.length != 0 && elDruga.value.length != 0){
                      var x = parseFloat(elPierwsza.value);
                     var y = parseFloat(elDruga.value);
+                        if(y !=0)
                     elWynik.innerHTML = x / y;
+                        else
+                            elWynik.innerHTML = "Nie wolno dzielić przez zero";
                     }
                     }
 
