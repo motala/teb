@@ -19,10 +19,21 @@
             Podaj podstawę potęgi: <input type="number" id="podstawa" autofocus><br><br>
             Podaj dodatni, całkowi wykładnik potęgi: <input type="number" id="wykladnik">
             </form><br>
-            <button id="przycisk">POTĘGOWANIE</button>
+            <button id="przycisk">POTĘGOWANIE</button><br><br>
+            <div id="komunikat"></div>
             <script>
-
-
+                var elPodstawa = document.getElementById("podstawa");
+                var elWykladnik = document.getElementById("wykladnik");
+                var elPrzycisk = document.getElementById("przycisk");
+                var elKomunikat = document.getElementById("komunikat");
+                function puste(){
+                    if(elPodstawa.value.length != 0 && elWykladnik.value.length != 0){
+                       //obliczenia
+                    }else{
+                        elKomunikat.innerHTML ="Wpisz podstawę i wykładnik potęgi.";
+                    }
+                }
+                elPrzycisk.addEventListener('click',puste);
             </script>
     </div>
 
