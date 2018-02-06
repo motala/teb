@@ -59,3 +59,29 @@ document.write('<br>' + Math.floor(z) + '<br>') //14
 
 var p = Math.pow(2,10);
 console.log(p); //1024
+
+
+
+//losowanie
+
+var losuj = Math.random();
+console.log(losuj);
+
+
+
+//miejsca po przecinku
+
+var k = 10.123456789;
+console.log(typeof(k));//number
+k = k.toFixed(4);//10.1235
+console.log(k);
+console.log(typeof(k));//string
+
+
+//precyzja
+
+var j = 10.1234567890;
+console.log(typeof(j));//number
+j = j.toPrecision(4);//10.12
+console.log(j);
+console.log(typeof(j));//string
