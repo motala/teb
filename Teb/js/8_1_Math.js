@@ -85,3 +85,11 @@ console.log(typeof(j));//number
 j = j.toPrecision(4);//10.12
 console.log(j);
 console.log(typeof(j));//string
+
+
+//losowanie
+//losuj liczby z przediału <0:10>
+
+
+
+
