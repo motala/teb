@@ -9,15 +9,14 @@ var elPromień = document.getElementById("promien");
 var elPrzycisk = document.getElementById("przycisk");
 var elKomunikat = document.getElementById("komunikat");
 var pole;
+var dlugosc;
 function poleKola(){
     if(elPromień.value >0){
-
-
     pole = pi*Math.pow(elPromień.value,2);
     pole = pole.toFixed(2);
     elKomunikat.innerHTML = "Pole koła wynosi:" + pole + "cm <sup>2</sup>";
         }else{
-            elKomunikat.innerHTML = "Promień koła musi być liczbą naturalną";
+            elKomunikat.innerHTML = "Promień koła musi być liczbą naturalną.";
         }
 }
 elPrzycisk.addEventListener('click',poleKola);
