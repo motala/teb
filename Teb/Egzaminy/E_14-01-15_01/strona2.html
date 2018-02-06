@@ -25,14 +25,23 @@
                 var elPodstawa = document.getElementById("podstawa");
                 var elWykladnik = document.getElementById("wykladnik");
                 var elPrzycisk = document.getElementById("przycisk");
+                var potega;
                 var elKomunikat = document.getElementById("komunikat");
                 function puste(){
                     if(elPodstawa.value.length != 0 && elWykladnik.value.length != 0){
-                       //obliczenia
+                       elKomunikat.innerHTML= "";
+                        if(elWykladnik.value < 0){
+                            elKomunikat.innerHTML = "Wykładnik potęgi musi być dodatni.";
+
+                        }else{
+                            potega = Math.pow(elPodstawa.value,elWykladnik.value);
+                            elKomunikat.innerHTML = "Wynik działania wynosi:" + potega;
+                        }
                     }else{
                         elKomunikat.innerHTML ="Wpisz podstawę i wykładnik potęgi.";
                     }
                 }
+
                 elPrzycisk.addEventListener('click',puste);
             </script>
     </div>
