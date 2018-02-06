@@ -32,6 +32,7 @@
                 var elMnozenie = document.getElementById("mnozenie");
                 var elDzielenie = document.getElementById("dzielenie");
                 var elWynik = document.getElementById("wynik");
+                var dzielenie;
                  function puste(){
                 if(elPierwsza.value.length == 0 || elDruga.value.length == 0){
                    elWynik.innerHTML = "Proszę uzupełnić obie liczby";
@@ -67,8 +68,11 @@
                     if(elPierwsza.value.length != 0 && elDruga.value.length != 0){
                      var x = parseFloat(elPierwsza.value);
                     var y = parseFloat(elDruga.value);
-                        if(y !=0)
-                    elWynik.innerHTML = x / y;
+                        if(y !=0){
+                            dzielenie = x/ y ;
+                            dzielenie = dzielenie.toFixed(2);
+                    elWynik.innerHTML = dzielenie;
+                            }
                         else
                             elWynik.innerHTML = "Nie wolno dzielić przez zero";
                     }
