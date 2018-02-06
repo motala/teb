@@ -126,12 +126,11 @@ function oblicz(){
         obwod = 4 * elBok.value;
         obwod = obwod.toFixed(2);
         elKomunikat.innerHTML = "Obwód kwadratu wynosi:" + obwod;
-                    }else{
-                        elKomunikat.innerHTML = "Błędna długość boku";
-                        elBok.focus();
-                        elBok.value = "";
-                    }
-
-    }
+         }else{
+         elKomunikat.innerHTML = "Błędna długość boku";
+        elBok.focus();
+        elBok.value = "";
+}
+}
 }
 elPrzycisk.addEventListener('click',oblicz);
