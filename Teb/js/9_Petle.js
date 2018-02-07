@@ -39,7 +39,32 @@ document.write("<br>");
 
 
 var elPoczatkowa = document.getElementById("poczatkowa");
-var elKoncowa = document.getElementById("koncowa");
+var elKoniec = document.getElementById("koniec");
 var elK = document.getElementById("k");
 var elP = document.getElementById("p");
-function
+var n;
+var tekst = '';
+var x;
+var y;
+
+function wyswietl(){
+   x = elPoczatkowa.value;
+    x = parseInt(x);
+    y = elKoniec.value;
+    y = parseInt(y);
+    for (n = x; n<= y; n++){
+        tekst += n + ' ';
+    }
+    elK.textContent = "";
+    elK.textContent = tekst;
+}
+elP.addEventListener('click',wyswietl);
+
+
+
+
+
+
+
+
+
