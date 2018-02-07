@@ -48,15 +48,14 @@ var x;
 var y;
 
 function wyswietl(){
-   x = elPoczatkowa.value;
+    x = elPoczatkowa.value;
     x = parseInt(x);
     y = elKoniec.value;
     y = parseInt(y);
     for (n = x; n<= y; n++){
-        tekst += n + ' ';
+        tekst += n + " ";
     }
-    elK.textContent = "";
-    elK.textContent = tekst;
+  elK.innerHTML = tekst;
 }
 elP.addEventListener('click',wyswietl);
 
