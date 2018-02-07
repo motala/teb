@@ -42,23 +42,82 @@ var elPoczatkowa = document.getElementById("poczatkowa");
 var elKoniec = document.getElementById("koniec");
 var elK = document.getElementById("k");
 var elP = document.getElementById("p");
-var n;
-var tekst = '';
+var m;
+var tekst;
 var x;
 var y;
 
 function wyswietl(){
+    tekst = '';
     x = elPoczatkowa.value;
     x = parseInt(x);
     y = elKoniec.value;
     y = parseInt(y);
-    for (n = x; n<= y; n++){
-        tekst += n + " ";
+    for (m = x; m <= y; m++){
+        tekst += m + " ";
     }
   elK.innerHTML = tekst;
 }
 elP.addEventListener('click',wyswietl);
 
+//##############################################################################################################################################################################
+//break
+
+for(var n = 10; n>=5; n--){
+    document.write(n + ' ');
+    if(n==7)
+        break;
+}
+document.write("<br>");
+
+
+
+//continue
+
+for(var o = 14; o < 20; o++){
+    if(o == 15 || o==18)
+        continue;
+    document.write(o + ' ');
+}
+
+document.write("<br>");
+//###############################################################################################################################################################################
+
+/*wyświetl na ekranie:
+*
+**
+***
+****
+*****
+******
+*/
+
+var p,r;
+for( p = 1; p<=6; p++){
+    for( r = 1; r<=p;r++){
+        document.write("*");
+    }
+    document.write("<br>");
+}
+//###############################################################################################################################################################################
+var elWiersz = document.getElementById("wiersz");
+var elZnak = document.getElementById("znak");
+var elPrzycisk = document.getElementById("przycisk");
+var elKomunikat = document.getElementById("komunikat");
+var ilosc,znak,c,d;
+
+
+function znak1(){
+ilosc = elWiersz.value;
+    znak=elZnak.value;
+    for(c = 1; c<= ilosc; c++){
+        for( d = 1;d<=c;d++){
+            document.write(znak);
+        }
+            document.write("<br>");
+    }
+}
+elPrzycisk.addEventListener('click',znak1);
 
 
 
