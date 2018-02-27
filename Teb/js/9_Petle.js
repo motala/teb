@@ -119,10 +119,3 @@ ilosc = elWiersz.value;
 }
 elPrzycisk.addEventListener('click',znak1);
 
-
-
-
-
-
-
-
