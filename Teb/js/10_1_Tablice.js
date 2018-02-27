@@ -15,5 +15,11 @@ losowanie();
 
 
 
-var tablica = ['Janusz',0,true,"anna"];
-console.log(tablica);
+var t = ['Janusz',0,true,"anna"];
+console.log(t);
+/*document.write(t[0]);*///janusz
+
+for(var i=0; i<t.length; i++ ){
+    //document.write(t[i]+ " ");
+    document.write(i+ 1 + ' element: ' + t[i] + '<br>');
+}
