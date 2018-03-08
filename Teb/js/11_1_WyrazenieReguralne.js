@@ -1,21 +1,44 @@
-/*//zadanie 1
-uzytkownik podaje w polu tekstowym kod kodPocztowy
-Pod pole wyswietl komunikat czy dane został pradidłowo wprowadzone: ................
-jeślio będą prawidłowe dane to wyświetl komunikat o tresci: "Prawidłowy kod pocztowy: ......................."
-jeśli będą błędny  to wyświetl komunikat "błędny kod pocztowy" i umieść kursor w polu tekstowym*/
+/*
+    zad.1
+    Użytkownik podaje w polu tekstowym kod pocztowy
+    Pod polem wyświetl komunikat czy dane zostały prawidłowo wprowadzone
+    Jeśli będą prawidłowe dane to wyświetl komunikat o treści: "Prawidłowy kod pocztowy: ............."
+    Jeśli będzie błędny to wyświetl komunikat: "Błędny kod pocztowy " i umieść kursor w polu tekstowym
+*/
 
-/*zadanie 2
-sprawdz adres poczty elektronicznej*/
+var elKod = document.getElementById('kod');
+var elMail = document.getElementById('mail');
+var elKomunikat = document.getElementById('komunikat');
+var elKomunikat1 = document.getElementById('komunikat1');
+var przycisk = document.getElementById('przycisk');
+var regKod = /^\d{2}-\d{3}$/;
+var regMail = /^[a-z]{1}[\w|\.|\-]{0,30}@(\w{1,20}\.){1,3}[a-z]{1,3}$/i;
 
-var elPrzycisk = document.getElementById("przycisk");
-var elWynik = document.getElementById("wynik");
-var elKod = document.getElementById("kod").value;
-var wzór = /^\d{2}-\d{3}$/;
-function poczta (){
-if(){
-  elWynik.innerHTML= "Prawidłowy kod pocztowy:" + ;
-}else{ elWynik.innerHTML= "błędny kod pocztowy";
-     }
+function sprawdz(){
+    let kod = elKod.value;
+    let sprKod = regKod.test(kod);
+    let mail = elMail.value;
+    let sprMail = regMail.test(mail);
+    if(sprKod){
+        elKomunikat.innerHTML = 'Prawidłowy kod pocztowy: ' + kod;
+    }else{
+        elKomunikat.innerHTML = 'Błędny kod pocztowy';
+        elKod.value = '';
+        elKod.focus();
+    }
+
+    if(sprMail){
+        elKomunikat1.innerHTML = 'Prawidłowy mail: ' + mail;
+    }else{
+        elKomunikat1.innerHTML = 'Błędny mail';
+        elMail.value = '';
+        elMail.focus();
+    }
+
 }
 
-elPrzycisk.addEventListener('click',poczta);
+przycisk.addEventListener('click',sprawdz);
+/*
+    zad.2
+    Sprawdź adres poczty elektronicznej
+*/
