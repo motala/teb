@@ -2,9 +2,64 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Formularze</title>
+    <title>Formularze1</title>
 </head>
 <body>
+<datalist id="procent">
+        <option value="0" label="0%"></option>
+        <option value="10"></option>
+        <option value="20"></option>
+        <option value="30"></option>
+        <option value="40"></option>
+        <option value="50" label="50%"></option>
+        <option value="60"></option>
+        <option value="70"></option>
+        <option value="80"></option>
+        <option value="90"></option>
+        <option value="100" label="100%"></option>
+
+    </datalist>
+    <datalist id="strony">
+        <option value="http://www.wp.pl"></option>
+        <option value="http://www.onet.pl"></option>
+        <option value="http://www.interia.pl"></option>
+        <option value="http://www.o2.pl"></option>
+    </datalist>
+<form name="suwak">
+    <input type="range" id="suwak" list="procent" step="10"><br>
+</form>
+<hr>
+<form name="www">
+    <input type="url" list="strony"><br>
+</form>
+
+<hr>
+<form name="przegladarka">
+   <label for="mojaPrzegladarka" >Wybierz przeglądarkę</label>
+   <input list="p" id="przegladarka" name="mojaPrzegladarka">
+   <datalist id="p">
+       <option value="Chromium">
+       <option value="Chrome">
+       <option value="Firefox">
+       <option value="Opera">
+       <option value="Safari">
+       </option>
+   </datalist>
+
+</form>
+
+<hr>
+<h3>Temperatura</h3>
+<meter min="30" max="43" value="31">Temperatura ciała</meter>
+<h3>Temperatura 2</h3>
+<meter low="30" high="43" max="50" value="37">Temperatura ciała</meter>
+<hr>
+
+<form name="inny">
+    <input type="text" autofocus  required name="imie"><br>
+    <input type="text" autofocus  required name="nazwisko" autocomplete="off"><br>
+    <br><input type="submit" id="przycisk3" value="Wyślij">
+</form>
 
 </body>
 </html>
