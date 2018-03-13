@@ -56,10 +56,35 @@
 <hr>
 
 <form name="inny">
-    <input type="text" autofocus  required name="imie"><br>
-    <input type="text" autofocus  required name="nazwisko" autocomplete="off"><br>
-    <br><input type="submit" id="przycisk3" value="Wyślij">
+    <input type="text" autofocus  required name="imie"><br><br>
+    <input type="text" autofocus  required name="nazwisko" autocomplete="off" pattern="([a-z]|[A-Z]){2,40}"><br>
+    <input type="tel" name="telKom" placeholder="111 333 222" pattern="[0-9 \-+()]{9,20}">
+        <br><input type="submit" id="przycisk3" value="Wyślij">
 </form>
+<hr>
+<input type="text" name="wyborOwoc" list="owoc">
+<datalist id="owoc" name="owoc">
+    <select name="owoc">
+        <option value="jablko">Jabłko</option>
+        <option value="banan">Banan</option>
+        <option value="pomelo">Pomelo</option>
+    </select>
+</datalist>
+<hr>
+<select name="owoc1">
 
+<option value="jablko">Jabłko</option>
+<option value="banan">Banan</option>
+<option value="pomelo">Pomelo</option>
+</select><br><br>
+
+
+<select name="owoc2" multiple>
+
+<option value="jablko">Jabłko</option>
+<option value="banan">Banan</option>
+<option value="pomelo">Pomelo</option>
+
+</select>
 </body>
 </html>
