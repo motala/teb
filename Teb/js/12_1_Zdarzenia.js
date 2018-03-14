@@ -1,5 +1,7 @@
 var elLitera = document.getElementById('litera');
 var elKod=document.getElementById('Kod');
+var elX=document.getElementById('x');
+var elY=document.getElementById('y');
 
 function litera(){
 //console.log(event.keyCode);
@@ -26,8 +28,18 @@ function litera(){
         case 27:
             Kod = 'esc';
             break;
+        case 255:
+            Kod = 'Fn';
+            break;
     }
     elKod.innerHTML = "Kod znaku : " + Kod;
 }
 
+function pozycja(){
+   //console.log(event.screenX);
+    elX.value = event.screenX;
+    elY.value = event.screenY;
+}
+
 elLitera.addEventListener('keyup', litera);
+window.addEventListener('mousemove',pozycja);
